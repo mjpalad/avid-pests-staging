@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avid Pest Control | Northwest Arkansas | General Pest & Termite Defense</title>
+    <meta name="description"
+        content="Affordable, family-owned general pest control, termite defense, and mosquito treatment in Pea Ridge, Bentonville, Rogers, Fayetteville, Springdale, and NWA. Call (479) 644-4061.">
+
+    <!-- Favicon / Brand Identity -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom styling extensions -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes pulse-dot {
+            0% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+            }
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 6px rgba(34, 197, 94, 0);
+            }
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+            }
+        }
+
+        .pulse-green {
+            animation: pulse-dot 2s infinite;
+        }
+
+        .shimmer-btn {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .shimmer-btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(to bottom right,
+                    rgba(255, 255, 255, 0) 0%,
+                    rgba(255, 255, 255, 0.1) 40%,
+                    rgba(255, 255, 255, 0.4) 50%,
+                    rgba(255, 255, 255, 0.1) 60%,
+                    rgba(255, 255, 255, 0) 100%);
+            transform: rotate(45deg);
+            transition: all 0.7s ease;
+            opacity: 0;
+        }
+
+        .shimmer-btn:hover::after {
+            opacity: 1;
+            left: 100%;
+            top: 100%;
+        }
+
+        .grid-dots {
+            background-image: radial-gradient(rgba(34, 197, 94, 0.12) 1.2px, transparent 1.2px);
+            background-size: 24px 24px;
+        }
+    </style>
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "PestControlService",
+      "name": "Avid Pest Control - Northwest Arkansas",
+      "url": "https://avidpests.com/northwest-arkansas.html",
+      "telephone": "+1-479-644-4061",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Pea Ridge",
+        "addressRegion": "AR",
+        "postalCode": "72751"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Pea Ridge" },
+        { "@type": "City", "name": "Bentonville" },
+        { "@type": "City", "name": "Rogers" },
+        { "@type": "City", "name": "Fayetteville" },
+        { "@type": "City", "name": "Springdale" },
+        { "@type": "City", "name": "Bella Vista" }
+      ]
+    }
+    </script>
+</head>
+
+<body class="bg-slate-900 text-slate-100 antialiased font-sans flex flex-col min-h-screen">
+
+    <!-- Navigation Header -->
+    <header class="bg-slate-950/90 backdrop-blur-md shadow-lg border-b border-slate-900 sticky top-0 z-40 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo Section -->
+            <a href="/" class="relative z-50 group flex items-center w-28 md:w-36 h-10" aria-label="Avid Pest Control Home">
+                <img src="/assets/logo-lM5zd1qj.png" alt="Avid Pest Control Logo"
+                    class="absolute -top-3 left-0 h-24 md:h-32 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                    style="filter: drop-shadow(1px 0 0 #ffffff) drop-shadow(-1px 0 0 #ffffff) drop-shadow(0 1px 0 #ffffff) drop-shadow(0 -1px 0 #ffffff);">
+            </a>
+
+            <!-- Desktop Navigation links -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-400">
+                <a href="/" class="hover:text-green-400 transition-colors">All Regions</a>
+                <a href="#services" class="hover:text-green-400 transition-colors">Pest Services</a>
+                <a href="#difference" class="hover:text-green-400 transition-colors">Why Avid</a>
+                <a href="#cities" class="hover:text-green-400 transition-colors">NWA Towns</a>
+                <a href="#quote-form" class="hover:text-green-400 transition-colors">Get Estimate</a>
+            </nav>
+
+            <!-- Navigation Actions -->
+            <div class="flex items-center space-x-3">
+                <a href="tel:+14796444061"
+                    class="shimmer-btn bg-green-700 text-white px-5 py-2.5 rounded-xl font-bold hover:bg-green-800 transition flex items-center space-x-2 shadow-md hover:shadow-green-700/20 active:scale-95 duration-150">
+                    <i data-lucide="phone" class="w-4 h-4"></i>
+                    <span>NWA: <strong>(479) 644-4061</strong></span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Regional Banner Notification -->
+    <div class="bg-gradient-to-r from-green-950 via-slate-900 to-green-950 border-b border-green-900/60 py-2.5 px-4 text-center text-xs font-semibold text-green-300">
+        <span class="inline-flex items-center gap-1.5">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-green-400"></i>
+            Northwest Arkansas Hub — Headquarters in Pea Ridge, AR (Serving Pea Ridge, Bentonville, Rogers, Fayetteville, Springdale & SW Missouri)
+        </span>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="bg-slate-950 py-16 md:py-24 border-b border-slate-800/60 relative overflow-hidden">
+        <div class="absolute inset-0 grid-dots pointer-events-none"></div>
+        <div class="absolute top-1/4 right-0 w-96 h-96 bg-green-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="max-w-6xl mx-auto px-4 relative z-10">
+            <div class="grid md:grid-cols-12 gap-12 items-center">
+                <div class="md:col-span-7 text-left">
+                    <span class="inline-flex items-center gap-1.5 bg-green-950/80 border border-green-800 text-green-400 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full shadow-lg">
+                        <span class="w-1.5 h-1.5 rounded-full bg-green-500 pulse-green"></span>
+                        Family-Owned NWA Pest Specialists
+                    </span>
+                    <h1 class="text-4xl md:text-6xl font-black text-white mt-6 tracking-tight leading-none md:leading-tight">
+                        Honest, Reliable <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-500">General Pest Defense</span> in NWA
+                    </h1>
+                    <p class="text-lg md:text-xl text-slate-400 mt-6 leading-relaxed font-normal">
+                        Proudly serving Pea Ridge, Bentonville, Rogers, Fayetteville, Springdale, and all of Northwest Arkansas. Safe, family & pet friendly treatments without mandatory 12-month contract lock-ins.
+                    </p>
+
+                    <div class="mt-8 flex flex-col sm:flex-row gap-4 max-w-lg">
+                        <a href="tel:+14796444061"
+                            class="w-full sm:w-auto bg-green-700 hover:bg-green-600 text-white text-lg font-bold px-8 py-4 rounded-xl active:scale-98 transition shadow-lg flex items-center justify-center space-x-3 duration-150 shimmer-btn">
+                            <i data-lucide="phone-call" class="w-5 h-5"></i>
+                            <span>Call (479) 644-4061</span>
+                        </a>
+                        <a href="#quote-form"
+                            class="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 text-white border border-slate-800 text-lg font-bold px-8 py-4 rounded-xl active:scale-98 transition flex items-center justify-center space-x-2 duration-150">
+                            <span>Get NWA Estimate</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="md:col-span-5 relative">
+                    <div class="absolute -inset-1.5 bg-gradient-to-r from-green-500 to-green-400 rounded-3xl blur opacity-30 animate-pulse"></div>
+                    <img src="./crew_truck_close.webp" alt="Avid Pest Control Team Northwest AR"
+                        class="relative rounded-3xl shadow-2xl border border-slate-800 object-cover w-full h-auto aspect-[1024/838]">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Protections Grid -->
+    <section id="services" class="bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900 py-24 border-b border-slate-900">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold text-green-400 uppercase tracking-widest bg-green-950/50 px-3 py-1 rounded-full border border-green-900/85">NWA Core Protections</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-4 tracking-tight">Our Core Pest Services in NWA</h2>
+                <div class="w-12 h-1 bg-green-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-slate-900 rounded-3xl border border-slate-800 shadow-xl overflow-hidden hover:scale-[1.02] transition duration-300 flex flex-col h-full">
+                    <div class="h-44 w-full overflow-hidden relative">
+                        <img src="/assets/service_general-CUE_zdWe.webp" alt="General Pest Control Sprayer Treatment" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80"></div>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <div class="text-[10px] font-bold text-green-400 bg-green-950 border border-green-900/60 px-2.5 py-0.5 rounded-full uppercase inline-block mb-2">Primary Defense</div>
+                            <h4 class="font-bold text-lg text-white mb-2">General Pest Control</h4>
+                            <p class="text-slate-400 text-xs leading-relaxed">Perimeter barriers protecting your home against ants, spiders, roaches, wasps, and seasonal pests.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-slate-900 rounded-3xl border border-slate-800 shadow-xl overflow-hidden hover:scale-[1.02] transition duration-300 flex flex-col h-full">
+                    <div class="h-44 w-full overflow-hidden relative">
+                        <img src="/assets/service_termite-CQyPr-hI.webp" alt="Termite Protection Arkansas" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80"></div>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <div class="text-[10px] font-bold text-green-400 bg-green-950 border border-green-900/60 px-2.5 py-0.5 rounded-full uppercase inline-block mb-2">Structural Shield</div>
+                            <h4 class="font-bold text-lg text-white mb-2">Termite Defense</h4>
+                            <p class="text-slate-400 text-xs leading-relaxed">Liquid barrier foundation treatments and structural inspections to prevent costly termite damage.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-slate-900 rounded-3xl border border-slate-800 shadow-xl overflow-hidden hover:scale-[1.02] transition duration-300 flex flex-col h-full">
+                    <div class="h-44 w-full overflow-hidden relative">
+                        <img src="/assets/service_mosquito-B6KEbqYx.webp" alt="Mosquito Yard Defense" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80"></div>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <div class="text-[10px] font-bold text-green-400 bg-green-950 border border-green-900/60 px-2.5 py-0.5 rounded-full uppercase inline-block mb-2">Outdoor Comfort</div>
+                            <h4 class="font-bold text-lg text-white mb-2">Mosquito & Yard Defense</h4>
+                            <p class="text-slate-400 text-xs leading-relaxed">Seasonal misting targeting foliage and breeding zones so your kids and pets can play safely outside.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-slate-900 rounded-3xl border border-slate-800 shadow-xl overflow-hidden hover:scale-[1.02] transition duration-300 flex flex-col h-full">
+                    <div class="h-44 w-full overflow-hidden relative">
+                        <img src="/assets/service_rodent-B3kikXWT.webp" alt="Specialty Extermination Rodents Wasps" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80"></div>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <div class="text-[10px] font-bold text-green-400 bg-green-950 border border-green-900/60 px-2.5 py-0.5 rounded-full uppercase inline-block mb-2">Exclusion Work</div>
+                            <h4 class="font-bold text-lg text-white mb-2">Rodent & Specialty</h4>
+                            <p class="text-slate-400 text-xs leading-relaxed">Exclusion sealing and targeted extermination for mice, hornets, and emergency interior infestations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NWA Service Note for Bed Bugs -->
+            <div class="mt-12 max-w-3xl mx-auto bg-slate-950 p-4 rounded-2xl border border-green-900/40 text-xs text-slate-400 flex items-center gap-3">
+                <i data-lucide="info" class="w-5 h-5 text-green-400 flex-shrink-0"></i>
+                <span><strong>Inquiring about Bed Bug Heat Treatments in NWA?</strong> Call our NWA office at <a href="tel:+14796444061" class="text-green-400 font-bold hover:underline">(479) 644-4061</a> to speak with our staff about dispatch options and local partner services.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- NWA Cities Served Section -->
+    <section id="cities" class="py-20 bg-slate-950 border-b border-slate-900 reveal grid-dots">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-extrabold text-white">Northwest Arkansas Towns We Serve</h2>
+            <div class="w-12 h-1 bg-green-500 mx-auto mt-4 rounded-full mb-8"></div>
+
+            <div class="flex flex-wrap justify-center gap-3">
+                <span class="bg-slate-900 text-slate-200 border border-slate-800 text-sm px-5 py-2.5 rounded-full font-semibold flex items-center gap-2">
+                    <i data-lucide="map-pin" class="w-4 h-4 text-green-400"></i> Pea Ridge (HQ)
+                </span>
+                <span class="bg-slate-900 text-slate-200 border border-slate-800 text-sm px-5 py-2.5 rounded-full font-semibold flex items-center gap-2">
+                    <i data-lucide="map-pin" class="w-4 h-4 text-green-400"></i> Bentonville
+                </span>
+                <span class="bg-slate-900 text-slate-200 border border-slate-800 text-sm px-5 py-2.5 rounded-full font-semibold flex items-center gap-2">
+                    <i data-lucide="map-pin" class="w-4 h-4 text-green-400"></i> Rogers
+                </span>
+                <span class="bg-slate-900 text-slate-200 border border-slate-800 text-sm px-5 py-2.5 rounded-full font-semibold flex items-center gap-2">
+                    <i data-lucide="map-pin" class="w-4 h-4 text-green-400"></i> Fayetteville
+                </span>
+                <span class="bg-slate-900 text-slate-200 border border-slate-800 text-sm px-5 py-2.5 rounded-full font-semibold flex items-center gap-2">
+                    <i data-lucide="map-pin" class="w-4 h-4 text-green-400"></i> Springdale
+                </span>
+                <span class="bg-slate-900 text-slate-200 border border-slate-800 text-sm px-5 py-2.5 rounded-full font-semibold flex items-center gap-2">
+                    <i data-lucide="map-pin" class="w-4 h-4 text-green-400"></i> Bella Vista
+                </span>
+                <span class="bg-slate-900 text-slate-200 border border-slate-800 text-sm px-5 py-2.5 rounded-full font-semibold flex items-center gap-2">
+                    <i data-lucide="map-pin" class="w-4 h-4 text-green-400"></i> Garfield
+                </span>
+                <span class="bg-slate-900 text-slate-200 border border-slate-800 text-sm px-5 py-2.5 rounded-full font-semibold flex items-center gap-2">
+                    <i data-lucide="map-pin" class="w-4 h-4 text-green-400"></i> Avoca
+                </span>
+                <span class="bg-slate-900 text-slate-200 border border-slate-800 text-sm px-5 py-2.5 rounded-full font-semibold flex items-center gap-2">
+                    <i data-lucide="map-pin" class="w-4 h-4 text-green-400"></i> Southwest Missouri
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Estimate Form Section -->
+    <section id="quote-form" class="bg-gradient-to-b from-slate-900 to-slate-950 py-24 px-4">
+        <div class="max-w-xl mx-auto bg-slate-950 p-8 md:p-10 rounded-3xl shadow-2xl border border-slate-800">
+            <h3 class="text-2xl font-extrabold text-white text-center mb-2">Get NWA Estimate</h3>
+            <p class="text-slate-400 text-sm text-center mb-8">Serving Pea Ridge, Bentonville, Rogers, Fayetteville & NWA.</p>
+            <form action="tel:+14796444061" class="space-y-4">
+                <a href="tel:+14796444061" class="w-full bg-green-700 hover:bg-green-600 text-white font-bold py-4 rounded-xl transition text-center block text-lg shadow-lg shimmer-btn">
+                    Call (479) 644-4061 Now
+                </a>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-500 py-12 px-4 text-center text-sm border-t border-slate-900">
+        <div class="max-w-6xl mx-auto space-y-4">
+            <p class="font-bold text-slate-400">Avid Pest Control — Northwest Arkansas Hub</p>
+            <p class="text-xs">Headquartered in Pea Ridge, AR. Call <a href="tel:+14796444061" class="text-green-400 font-bold">(479) 644-4061</a>.</p>
+            <div class="flex justify-center gap-4 text-xs">
+                <a href="/" class="hover:text-slate-300">Main Site</a> | 
+                <a href="./central-arkansas.html" class="hover:text-slate-300">Central Arkansas Page</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealOnScroll = () => {
+            for (let i = 0; i < revealElements.length; i++) {
+                if (revealElements[i].getBoundingClientRect().top < window.innerHeight - 100) {
+                    revealElements[i].classList.add('active');
+                }
+            }
+        };
+        window.addEventListener('scroll', revealOnScroll);
+        setTimeout(revealOnScroll, 100);
+    </script>
+</body>
+</html>
